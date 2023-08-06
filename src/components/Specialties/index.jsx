@@ -2,7 +2,7 @@ import React from 'react'
 import c from './Specialties.module.scss'
 import spec from '../../images/specialties.png'
 import { all_spec } from '../../utils'
-import Title from '../Title'
+import Title from '../title'
 const Specialties = () => {
   const width = window.innerWidth
   

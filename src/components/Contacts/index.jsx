@@ -1,6 +1,6 @@
 import React from 'react'
 import c from './Contacts.module.scss'
-import Title from '../Title'
+import Title from '../title'
 import { contactsInfo } from '../../utils'
 import ContactsCard from './ContactsCard'
 

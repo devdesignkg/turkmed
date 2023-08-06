@@ -1,7 +1,7 @@
 import React from 'react'
 import c from './News.module.scss'
 import NewsCard from './NewsCard'
-import Title from '../Title'
+import Title from '../title'
 
 const News = () => {
   return (

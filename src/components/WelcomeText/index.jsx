@@ -1,7 +1,7 @@
 import React from 'react'
 import c from './WelcomeText.module.scss'
 import arrow from '../../images/arrow-right.svg'
-import Title from '../Title'
+import Title from '../title'
 
 const WelcomeText = () => {
   return (

@@ -4,7 +4,7 @@ import Banner from "./Banner";
 import WelcomeText from "./WelcomeText";
 import Specialties from "./Specialties";
 import News from "./News";
-import Title from "./Title";
+import Title from "./title";
 import Contacts from "./Contacts";
 import Doctors from "./Doctors";
 import DoctorsCard from "./DoctorsCard";
