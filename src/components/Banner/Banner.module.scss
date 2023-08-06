@@ -1,0 +1,49 @@
+.banner {
+  background-image: url('../../../src/images/banner.png');
+  width: 100%;
+  height: 550px;
+
+  .container {
+    max-width: 992px;
+    margin: 0 auto;
+    
+    .banner_title {
+      width: 613px;
+      padding-top: 167px;
+      p {
+        color: var(--secondary, #159EEC);
+        font-family: "Work Sans", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.88px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        color: #007E85;
+        font-family: 'Yeseva One', cursive;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 8px;
+      }
+
+      button {
+        color: #007E85;
+        font-family: "Work Sans", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 50px;
+        background: var(--accent, #BFD2F8);
+        padding: 13px 35px;
+        margin-top: 32px;
+      }
+    }
+  }
+
+}
