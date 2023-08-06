@@ -10,6 +10,7 @@ const Main = () => {
       <Components.Banner/>
       <Components.WelcomeText/>
       <Components.Specialties/>
+      <Components.Doctors/>
     </div>
   )
 }

@@ -1,0 +1,25 @@
+.title{
+  text-align: center;
+
+  p {
+    color: var(--secondary, #159EEC);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  
+  h1 {
+    color: #007E85;
+    font-family: 'Yeseva One';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+}
