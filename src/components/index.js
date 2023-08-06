@@ -8,6 +8,7 @@ import Title from "./Title";
 import Contacts from "./Contacts";
 import Doctors from "./Doctors";
 import DoctorsCard from "./DoctorsCard";
+import Footer from "./Footer";
 
 export const Components = {
   NavbarTop,
@@ -19,5 +20,6 @@ export const Components = {
   Title,
   Contacts,
   Doctors,
-  DoctorsCard
+  DoctorsCard,
+  Footer,
 }

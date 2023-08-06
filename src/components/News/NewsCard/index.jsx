@@ -6,7 +6,7 @@ import newsImg from '../../../images/news.png'
 const NewsCard = () => {
   return (
     <div className={c.card}>
-      <img src={newsImg} alt="news" />
+      <img src={newsImg} alt="news" loading='lazy'/>
       <div className={c.card_inner}>
         <span className={c.date}>
           05.08.2023

@@ -2,29 +2,44 @@
   max-width: 992px;
   margin: 64px auto;
 
+  @media (max-width: 990px) {
+    width: 90%;
+  }
+
   .contacts_block {
     margin-top: 64px;
     display: flex;
     gap: 20px;
+
+    @media (max-width: 990px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .contacts_card {
       width: 233px;
       height: 233px;
       border-radius: 5px;
       background: var(--accent, #BFD2F8);
       padding: 50px 20px;
-      font-family:' Work Sans', sans-serif;
+      font-family: ' Work Sans', sans-serif;
       transition: .5s;
-      .contacts_img{
+
+      .contacts_img {
         margin-bottom: 15px;
-        svg{
-          path{
+
+        svg {
+          path {
             transition: .5s;
           }
         }
       }
-      p,a{
+
+      p,
+      a {
         transition: .5s;
       }
+
       p {
         color: #007E85;
         font-size: 18px;
@@ -45,14 +60,17 @@
         margin-bottom: 5px;
       }
 
-      &:hover{
+      &:hover {
         background: #007E85;
-        p,a{
+
+        p,
+        a {
           color: var(--accent, #BFD2F8);
         }
-        .contacts_img{
-          svg{
-            path{
+
+        .contacts_img {
+          svg {
+            path {
               stroke: #BFD2F8;
             }
           }

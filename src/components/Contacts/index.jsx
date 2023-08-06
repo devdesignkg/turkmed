@@ -7,7 +7,7 @@ import ContactsCard from './ContactsCard'
 const Contacts = () => {
   return (
     <div className={c.contacts}>
-      <Title sub={'связаться с нами'} title={'Контакты'}/>
+      <Title desc={'связаться с нами'} title={'Контакты'}/>
       <div className={c.contacts_block}>
         <div className={c.contacts_card}>
           <div className={c.contacts_img}>

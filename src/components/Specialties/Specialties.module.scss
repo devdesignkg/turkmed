@@ -7,6 +7,11 @@
 
     img {
       width: 100%;
+
+      @media (max-width: 430px) {
+        height: 150px;
+        object-fit: cover;
+      }
     }
   }
 
@@ -40,6 +45,14 @@
       flex-wrap: wrap;
       margin-top: 64px;
 
+      @media (max-width: 990px) {
+        justify-content: center;
+      }
+
+      @media (max-width: 430px) {
+        gap: 8px;
+      }
+
       .spec_card {
         width: 248px;
         height: 172px;
@@ -52,6 +65,11 @@
         cursor: pointer;
         transition: .5s;
 
+        @media (max-width: 430px) {
+          width: 150px;
+          height: 105px;
+        }
+
         p {
           color: var(--black, #212124);
           text-align: center;
@@ -60,16 +78,26 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+
+          @media (max-width: 430px) {
+            font-size: 14px;
+            width: 95px;
+            word-wrap: break-word;
+          }
         }
-        svg{
+
+        svg {
           transition: .5s;
         }
+
         &:hover {
           border-radius: 5px;
           background: #007E85;
-          p{
+
+          p {
             color: var(--accent, #BFD2F8);
           }
+
           svg {
             path {
               fill: #BFD2F8;

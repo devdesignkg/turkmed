@@ -1,4 +1,5 @@
 import './App.css';
+import { Components } from './components';
 import MainRoutes from './routes';
 
 import axios from 'axios';
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <MainRoutes/>
+      <Components.Footer/>
     </div>
   );
 }
