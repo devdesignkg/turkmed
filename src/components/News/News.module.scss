@@ -1,0 +1,14 @@
+.news {
+  max-width: 992px;
+  margin: 64px auto;
+
+  .news_block {
+    margin-top: 64px;
+
+    .news_card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+}
