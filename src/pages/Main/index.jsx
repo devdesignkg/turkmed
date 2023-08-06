@@ -8,6 +8,8 @@ const Main = () => {
       <Components.NavbarTop/>
       <Components.NavbarDown/>
       <Components.Banner/>
+      <Components.WelcomeText/>
+      <Components.Specialties/>
     </div>
   )
 }
