@@ -11,7 +11,7 @@ const NavbarDown = () => {
         <ul>
           {
             navList.map(item => (
-              <li>
+              <li key={item.id}>
                 <Link to={item.route}>
                   {item.title}
                 </Link>

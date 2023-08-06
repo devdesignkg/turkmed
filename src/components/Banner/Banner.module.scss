@@ -1,7 +1,11 @@
 .banner {
   background-image: url('../../../src/images/banner.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
   width: 100%;
-  height: 550px;
+  height: auto;
+  max-height: 700px;
 
   .container {
     max-width: 992px;
@@ -9,7 +13,7 @@
     
     .banner_title {
       width: 613px;
-      padding-top: 167px;
+      padding: 167px 0;
       p {
         color: var(--secondary, #159EEC);
         font-family: "Work Sans", sans-serif;
