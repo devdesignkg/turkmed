@@ -1,0 +1,27 @@
+.navbar {
+  background-color: #007E85;
+  .container {
+    max-width: 992px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    ul {
+      display: flex;
+      gap: 20px;
+
+      li {
+        color: var(--white, #FCFEFE);
+        font-family: 'Work Sans', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+    .search{
+      cursor: pointer;
+    }
+  }
+}
