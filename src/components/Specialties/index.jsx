@@ -2,6 +2,7 @@ import React from 'react'
 import c from './Specialties.module.scss'
 import spec from '../../images/specialties.png'
 import { all_spec } from '../../utils'
+import Title from '../title'
 const Specialties = () => {
   return (
     <div className={c.specialties}>
@@ -9,10 +10,10 @@ const Specialties = () => {
         <img src={spec} alt="spec" />
       </div>
       <div className={c.our_spec}>
-        <div className={c.spec_title}>
-          <p>Всегда заботимся о вас!</p>
-          <h1>Наши специальности</h1>
-        </div>
+        <Title 
+          title={'Наши специальности'}
+          desc={'Всегда заботимся о вас!'}
+        />
         <div className={c.all_spec}>
           {
             all_spec.map(item => (
