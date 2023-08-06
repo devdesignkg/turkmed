@@ -1,5 +1,5 @@
 import { Pages } from "../pages"
-
+import spec from '../images/spec.svg'
 export const PUBLIC_ROUTES = [
   {
     id:1,
@@ -33,5 +33,68 @@ export const navList = [
     id: 5,
     title: 'Контакты',
     route: '/',
+  },
+]
+
+export const all_spec = [
+  {
+    id:1,
+    img: spec,
+    text: 'Неврология'
+  },
+  {
+    id: 2,
+    img: spec,
+    text: 'Кости'
+  },
+  {
+    id: 3,
+    img: spec,
+    text: 'Онкология'
+  },
+  {
+    id: 4,
+    img: spec,
+    text: 'Оториноларингология'
+  },
+  {
+    id: 5,
+    img: spec,
+    text: 'Офтальмология'
+  },
+  {
+    id: 6,
+    img: spec,
+    text: 'Сердечно-сосудистые'
+  },
+  {
+    id: 7,
+    img: spec,
+    text: 'пульмонология'
+  },
+  {
+    id: 8,
+    img: spec,
+    text: 'Почечная медицина'
+  },
+  {
+    id: 9,
+    img: spec,
+    text: 'Гастроэнтерология'
+  },
+  {
+    id: 10,
+    img: spec,
+    text: 'Урология'
+  },
+  {
+    id: 11,
+    img: spec,
+    text: 'Дерматология'
+  },
+  {
+    id: 12,
+    img: spec,
+    text: 'Гинекология'
   },
 ]

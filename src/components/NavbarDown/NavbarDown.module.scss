@@ -1,5 +1,6 @@
 .navbar {
   background-color: #007E85;
+
   .container {
     max-width: 992px;
     margin: 0 auto;
@@ -7,9 +8,23 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
+
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+
+    @media (max-width: 500px) {
+      padding: 19px 0;
+      height: unset;
+    }
+
     ul {
       display: flex;
       gap: 20px;
+
+      @media (max-width: 500px) {
+        display: none;
+      }
 
       li {
         color: var(--white, #FCFEFE);
@@ -20,8 +35,34 @@
         line-height: normal;
       }
     }
-    .search{
-      cursor: pointer;
+
+    .logo {
+      display: none;
+
+      @media (max-width: 500px) {
+        display: block;
+      }
     }
+
+    .right {
+      @media (max-width: 500px) {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .search {
+        cursor: pointer;
+      }
+
+      .burger {
+        display: none;
+
+        @media (max-width: 500px) {
+          display: block;
+        }
+      }
+    }
+
   }
 }

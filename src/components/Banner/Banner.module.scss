@@ -10,10 +10,19 @@
   .container {
     max-width: 992px;
     margin: 0 auto;
-    
+
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+
     .banner_title {
       width: 613px;
       padding: 167px 0;
+      @media (max-width: 650px) {
+        width: 95%;
+        text-align: center;
+        padding: 118px 0;
+      }
       p {
         color: var(--secondary, #159EEC);
         font-family: "Work Sans", sans-serif;
@@ -48,6 +57,7 @@
         margin-top: 32px;
       }
     }
+
   }
 
 }
