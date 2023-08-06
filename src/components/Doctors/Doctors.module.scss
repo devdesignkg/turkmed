@@ -1,0 +1,12 @@
+.container{
+  margin-top: 64px;
+  .doctors{
+    .cards{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 64px;
+      gap: 21px;
+    }
+  }
+}
