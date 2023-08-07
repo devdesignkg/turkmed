@@ -9,10 +9,10 @@ const Doctors = () => {
   return (
     <div className={c.container}>
       <div className={c.doctors}>
-        {/* <Components.Title 
+        <Components.Title 
           title={'Наши врачи'}
           desc={'ВЫ ПОПАДЕТЕ В НАДЕЖНЫЕ РУКИ'}
-        />  */}
+        /> 
 
         <div className={c.cards}>
           {

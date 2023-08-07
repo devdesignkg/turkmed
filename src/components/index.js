@@ -4,7 +4,7 @@ import Banner from "./Banner";
 import WelcomeText from "./WelcomeText";
 import Specialties from "./Specialties";
 import News from "./News";
-// import Title from "./title";
+import Title from "./Title";
 import Contacts from "./Contacts";
 import Doctors from "./Doctors";
 import DoctorsCard from "./DoctorsCard";
@@ -17,7 +17,7 @@ export const Components = {
   WelcomeText,
   Specialties,
   News,
-  // Title,
+  Title,
   Contacts,
   Doctors,
   DoctorsCard,

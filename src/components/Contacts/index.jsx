@@ -1,13 +1,13 @@
 import React from 'react'
 import c from './Contacts.module.scss'
-// import Title from '../title'
+import Title from '../Title'
 import { contactsInfo } from '../../utils'
 import ContactsCard from './ContactsCard'
 
 const Contacts = () => {
   return (
     <div className={c.contacts}>
-      {/* <Title desc={'связаться с нами'} title={'Контакты'}/> */}
+      <Title desc={'связаться с нами'} title={'Контакты'}/>
       <div className={c.contacts_block}>
         <div className={c.contacts_card}>
           <div className={c.contacts_img}>
