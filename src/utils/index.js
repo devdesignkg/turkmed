@@ -26,6 +26,11 @@ export const PUBLIC_ROUTES = [
     route: '/news/',
     page: <Pages.NewsPage />,
   },
+  {
+    id: 5,
+    route: '/gallery/',
+    page: <Pages.Gallery />,
+  },
 ]
 
 export const footerLinksList = [
