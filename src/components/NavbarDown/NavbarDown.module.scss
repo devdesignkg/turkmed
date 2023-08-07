@@ -1,6 +1,14 @@
 .navbar {
   background-color: #007E85;
 
+  width: 100%;
+
+  @media (max-width: 500px) {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+  }
+
   .container {
     max-width: 992px;
     margin: 0 auto;
@@ -33,6 +41,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        .active {
+          color: var(--accent, #BFD2F8);
+        }
       }
     }
 
