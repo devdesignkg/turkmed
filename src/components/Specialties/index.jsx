@@ -2,7 +2,7 @@ import React from 'react'
 import c from './Specialties.module.scss'
 import spec from '../../images/specialties.png'
 import { all_spec } from '../../utils'
-import Title from '../title'
+// import Title from '../title'
 const Specialties = () => {
   const width = window.innerWidth
   
@@ -12,10 +12,10 @@ const Specialties = () => {
         <img src={spec} alt="spec" loading='lazy'/>
       </div>
       <div className={c.our_spec}>
-        <Title 
+        {/* <Title 
           title={'Наши специальности'}
           desc={'Всегда заботимся о вас!'}
-        />
+        /> */}
         <div className={c.all_spec}>
           {/* {
             all_spec.map(item => (
