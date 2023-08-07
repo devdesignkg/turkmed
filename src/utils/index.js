@@ -8,13 +8,18 @@ export const PUBLIC_ROUTES = [
   },
   {
     id: 2,
-    route: '/doctors',
+    route: '/doctors/',
     page: <Pages.DoctorsPage />,
   },
   {
     id: 3,
-    route: '/contacts',
+    route: '/contacts/',
     page: <Pages.ContactsPage />,
+  },
+  {
+    id: 4,
+    route: '/doctor/:id/',
+    page: <Pages.DoctorMore />,
   },
 ]
 

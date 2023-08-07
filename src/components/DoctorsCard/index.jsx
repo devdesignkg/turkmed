@@ -1,8 +1,10 @@
 import React from 'react'
 import c from './Card.module.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const DoctorsCard = ({item}) => {
+  const navigate = useNavigate()
+
   return (
     <div className={c.card}>
       <div className={c.image}>
@@ -41,7 +43,7 @@ const DoctorsCard = ({item}) => {
           </li>
         </div>
       </div>
-      <button>
+      <button onClick={() => navigate(`/doctor/${item.id}/`)}>
         Посмотреть
       </button>
     </div>
