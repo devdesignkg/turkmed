@@ -3,9 +3,9 @@
   position: absolute;
   width: 100%;
   padding-bottom: 50px;
-  top: -100%;
+  top: -50%;
   transition: .7s;
-  z-index: -4;
+  z-index: 4;
   opacity: 0;
 
   .inner {
@@ -13,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     gap: 36px;
+
     ul {
       text-align: center;
 
@@ -51,7 +52,7 @@
 }
 
 .sidebar_active {
-  top: 100%;
+  top: 15%;
   transition: .7s;
   opacity: 1;
 }
