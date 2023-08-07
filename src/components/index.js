@@ -10,6 +10,7 @@ import Doctors from "./Doctors";
 import DoctorsCard from "./DoctorsCard";
 import Footer from "./Footer";
 
+
 export const Components = {
   NavbarTop,
   NavbarDown,
