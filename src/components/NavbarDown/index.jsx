@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import search from '../../images/search.svg'
 import burger from '../../images/burger.svg'
 import logo from '../../images/logo-white.svg'
+import Sidebar from './Sidebar'
 
 const NavbarDown = () => {
   const navigate = useNavigate()
@@ -29,12 +30,18 @@ const NavbarDown = () => {
           <div className={c.search}>
             <img src={search} alt="img" />
           </div>
-          <div className={c.burger}>
-            <img src={burger} alt="burger" />
+          <div className={c.right}>
+            <div className={c.search}>
+              <img src={search} alt="img" />
+            </div>
+            <div className={c.burger} onClick={() => setSidebarActive(!sidebarActive)}>
+              <img src={burger} alt="burger" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <Sidebar active={sidebarActive}/>
+    </>
   )
 }
 
