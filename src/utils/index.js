@@ -21,6 +21,11 @@ export const PUBLIC_ROUTES = [
     route: '/doctor/:id/',
     page: <Pages.DoctorMore />,
   },
+  {
+    id: 5,
+    route: '/news/',
+    page: <Pages.NewsPage />,
+  },
 ]
 
 export const footerLinksList = [
