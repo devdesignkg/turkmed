@@ -20,6 +20,17 @@ const Footer = () => {
           </div>
           <FooterLinks/>
           <FooterContacts/>
+          <ul className={c.links}>
+            <li>
+              <img src={insta} alt="insta" />
+            </li>
+            <li>
+              <img src={youtube} alt="youtube" />
+            </li>
+            <li>
+              <img src={whatsapp} alt="whatsapp" />
+            </li>
+          </ul>
         </div>
         <div className={c.footer_bottom}>
           <div className={c.line}></div>

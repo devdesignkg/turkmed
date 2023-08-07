@@ -8,6 +8,9 @@
 
   ul {
     margin-top: 39px;
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
     li {
       font-size: 16px;
       font-style: normal;

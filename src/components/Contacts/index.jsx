@@ -1,13 +1,25 @@
 import React from 'react'
 import c from './Contacts.module.scss'
-import Title from '../Title'
 import { contactsInfo } from '../../utils'
 import ContactsCard from './ContactsCard'
+import Map from './Map'
+import { useLocation } from 'react-router-dom'
+import Title from '../Title'
+
 
 const Contacts = () => {
+  const location = useLocation().pathname
+
   return (
     <div className={c.contacts}>
-      <Title desc={'связаться с нами'} title={'Контакты'}/>
+      {
+        location === '/contacts' ? 
+        <div className={c.title}>
+          <p>связаться с нами</p>
+          <h1>Контакты</h1>
+        </div> : <Title desc={'связаться с нами'} title={'Контакты'}/>
+      }
+      
       <div className={c.contacts_block}>
         <div className={c.contacts_card}>
           <div className={c.contacts_img}>
@@ -32,6 +44,9 @@ const Contacts = () => {
           ))
         }
       </div>
+      {
+        location === '/contacts' && <Map/>
+      }
     </div>
   )
 }
