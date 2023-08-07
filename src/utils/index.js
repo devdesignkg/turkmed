@@ -6,6 +6,16 @@ export const PUBLIC_ROUTES = [
     route: '/',
     page: <Pages.Main/>,
   },
+  {
+    id: 2,
+    route: '/doctors',
+    page: <Pages.DoctorsPage />,
+  },
+  {
+    id: 3,
+    route: '/contacts',
+    page: <Pages.ContactsPage />,
+  },
 ]
 
 export const footerLinksList = [
@@ -58,22 +68,22 @@ export const navList = [
   {
     id: 2,
     title: 'Врачи',
-    route: '/',
+    route: '/doctors',
   },
   {
     id: 3,
     title: 'Новости',
-    route: '/',
+    route: '/news',
   },
   {
     id: 4,
     title: 'Галерея',
-    route: '/',
+    route: '/gallery',
   },
   {
     id: 5,
     title: 'Контакты',
-    route: '/',
+    route: '/contacts',
   },
 ]
 

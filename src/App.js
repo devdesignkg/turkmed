@@ -9,6 +9,8 @@ axios.defaults.baseURL = 'https://turkmed890.pythonanywhere.com'
 function App() {
   return (
     <div className="App">
+      <Components.NavbarTop />
+      <Components.NavbarDown />
       <MainRoutes/>
       <Components.Footer/>
     </div>
