@@ -1,7 +1,7 @@
 import React from 'react'
 import c from './NavbarDown.module.scss'
 import { navList } from '../../utils'
-import {NavLink, useLocation } from 'react-router-dom'
+import {NavLink, useLocation, useNavigate } from 'react-router-dom'
 import search from '../../images/search.svg'
 import burger from '../../images/burger.svg'
 import logo from '../../images/logo-white.svg'
@@ -10,7 +10,7 @@ import Sidebar from './Sidebar'
 const NavbarDown = () => {
   const [sidebarActive, setSidebarActive] = React.useState(false)
   const path = useLocation().pathname
-  
+  const navigate = useNavigate()
   React.useEffect(() => {
     setSidebarActive(false)
   }, [path])
@@ -34,7 +34,7 @@ const NavbarDown = () => {
             }
           </ul>
           <div className={c.logo}>
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo" onClick={() => navigate('/')} loading='lazy'/>
           </div>
           <div className={c.right}>
             <div className={c.search}>
@@ -46,7 +46,7 @@ const NavbarDown = () => {
           </div>
         </div>
       </div>
-      <Sidebar active={sidebarActive}/>
+      <Sidebar active={sidebarActive} setActive={setSidebarActive} />
     </>
   )
 }
