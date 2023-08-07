@@ -3,30 +3,33 @@
   text-align: center;
   margin: 64px auto;
 
-  >p {
-    color: var(--secondary, #159EEC);
-    text-align: center;
 
-    /* Caption */
-    font-family: "Work Sans", sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 2.88px;
-    text-transform: uppercase;
-  }
+  .title {
+    // text-align: center;
 
-  h2 {
-    color: #007E85;
-    text-align: center;
+    p {
+      color: var(--secondary, #159EEC);
+      text-align: center;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2.88px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
 
-    font-family: " Yeseva One";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 15px;
+    h1 {
+      color: #007E85;
+      text-align: center;
+      font-family: 'Yeseva One';
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 15px;
+    }
   }
 
   span {
