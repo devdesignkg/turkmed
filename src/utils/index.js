@@ -8,6 +8,47 @@ export const PUBLIC_ROUTES = [
   },
 ]
 
+export const footerLinksList = [
+  {
+    id:1,
+    text: 'Запись на прием',
+    route: ''
+  },
+  {
+    id: 2,
+    text: 'Врачи',
+    route: ''
+  },
+  {
+    id: 3,
+    text: 'Наши услуги',
+    route: ''
+  },
+  {
+    id: 4,
+    text: 'О нас',
+    route: ''
+  },
+]
+
+export const footerContactList = [
+  {
+    id: 1,
+    text: 'Телефон: (237) 681-812-255',
+    route: ''
+  },
+  {
+    id: 2,
+    text: 'Эл. почта: fildineesoe@gmail.com',
+    route: ''
+  },
+  {
+    id: 3,
+    text: 'Адрес: 0123 Some place',
+    route: ''
+  },
+]
+
 export const navList = [
   {
     id:1,
