@@ -1,5 +1,8 @@
 .card{
   width: 317px;
+  @media (max-width: 425px) {
+    width: 300px;
+  }
   .image{
     height: 350px;
     border-radius: 5px 5px 0px 0px;

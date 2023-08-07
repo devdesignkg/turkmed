@@ -3,7 +3,7 @@ import c from './Sidebar.module.scss'
 import { navList } from '../../../utils'
 import {NavLink } from 'react-router-dom'
 
-const Sidebar = ({active}) => {
+const Sidebar = ({active, setActive}) => {
   return (
     <div className={active ? `${c.sidebar} ${c.sidebar_active}` : c.sidebar}>
       <div className={c.inner}>
@@ -14,6 +14,7 @@ const Sidebar = ({active}) => {
                 <NavLink 
                   to={item.route} 
                   className={({ isActive }) => (isActive ? c.active : 'inactive')}
+                  onClick={() => setActive(!active)}
                 >
                   {item.title}
                 </NavLink>

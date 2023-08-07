@@ -9,6 +9,8 @@ import Sidebar from './Sidebar'
 
 const NavbarDown = () => {
   const navigate = useNavigate()
+  const [ sidebarActive, setSidebarActive ] = React.useState(false)
+  
   return (
     <div className={c.navbar}>
       <div className={c.container}>
@@ -27,9 +29,7 @@ const NavbarDown = () => {
           <img src={logo} alt="logo" onClick={() => navigate('/')} />
         </div>
         <div className={c.right}>
-          <div className={c.search}>
-            <img src={search} alt="img" />
-          </div>
+ 
           <div className={c.right}>
             <div className={c.search}>
               <img src={search} alt="img" />
@@ -40,8 +40,8 @@ const NavbarDown = () => {
           </div>
         </div>
       </div>
-      <Sidebar active={sidebarActive}/>
-    </>
+      <Sidebar active={sidebarActive} setActive={setSidebarActive} />
+    </div>
   )
 }
 
