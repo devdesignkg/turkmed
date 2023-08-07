@@ -1,0 +1,43 @@
+.gallery {
+  max-width: 992px;
+  margin: 0 auto;
+
+  .title {
+    margin-top: 64px;
+
+    h1 {
+      color: #007E85;
+      font-family: 'Yeseva One';
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 64px;
+
+    div {
+      width: 400px;
+      height: 300px;
+
+      &:nth-child(2) {
+        width: 575px;
+      }
+
+      &:nth-child(3n) {
+        width: 575px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
