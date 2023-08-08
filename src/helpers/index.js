@@ -13,3 +13,9 @@ export const GetDoctors = () => {
     doctors
   }
 }
+
+export const ScrollTop = () => {
+  window.scrollTo({
+    top: 0
+  })
+}
