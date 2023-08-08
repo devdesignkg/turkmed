@@ -1,5 +1,8 @@
 import { Pages } from "../pages"
 import spec from '../images/spec.svg'
+import banner from '../images/group-photo.jpg'
+import banner2 from '../images/reception.jpg'
+
 export const PUBLIC_ROUTES = [
   {
     id:1,
@@ -31,6 +34,21 @@ export const PUBLIC_ROUTES = [
     route: '/gallery/',
     page: <Pages.Gallery />,
   },
+]
+
+export const bannerData = [
+  {
+    id:1,
+    url: banner2,
+    desc: 'Мы заботимся о вашей здоровии',
+    title: 'Впереди в медицинском совершенстве'
+  },
+  {
+    id: 2,
+    url: banner,
+    desc: 'Мы заботимся о вашей здоровии',
+    title: 'Впереди в медицинском совершенстве'
+  }
 ]
 
 export const footerLinksList = [

@@ -1,12 +1,14 @@
 import React from 'react'
 import c from './Doctor.module.scss'
 import { useParams } from 'react-router-dom'
-import { GetDoctors } from '../../helpers'
+import { GetDoctors, ScrollTop } from '../../helpers'
 
 const DoctorMore = () => {
   const { id } = useParams()
   const { doctors } = GetDoctors()
-
+  React.useEffect(() => {
+    ScrollTop()
+  }, [])
   const item = doctors?.find(value => value.id === Number(id))
   return (
     <div className={c.container}>

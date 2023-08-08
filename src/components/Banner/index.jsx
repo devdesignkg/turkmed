@@ -1,13 +1,18 @@
 import React from 'react'
 import c from './Banner.module.scss'
 
-const Banner = () => {
+const Banner = ({url, desc, title}) => {
+  const containerStyle = {
+    backgroundImage: `url(${url})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center ',
+  };
   return (
-    <div className={c.banner}>
+    <div className={c.banner} style={containerStyle}>
       <div className={c.container}>
         <div className={c.banner_title}>
-          <p>Мы заботимся о вашей здоровии</p>
-          <h1>Впереди в медицинском совершенстве</h1>
+          <p>{desc}</p>
+          <h1>{title}</h1>
           <button>Наши специальности</button>
         </div>
       </div>
