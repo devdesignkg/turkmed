@@ -1,6 +1,6 @@
 import React from 'react'
 import c from './Gallery.module.scss'
-import photo from '../../images/gallery-1.png'
+import photo from '../../images/gallery-2.png'
 
 const Gallery = () => {
   return (
