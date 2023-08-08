@@ -9,6 +9,7 @@ import Contacts from "./Contacts";
 import Doctors from "./Doctors";
 import DoctorsCard from "./DoctorsCard";
 import Footer from "./Footer";
+import BannerSwiper from "./BannerSwiper";
 
 
 export const Components = {
@@ -23,4 +24,5 @@ export const Components = {
   Doctors,
   DoctorsCard,
   Footer,
+  BannerSwiper
 }

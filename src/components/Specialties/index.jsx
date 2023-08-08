@@ -1,6 +1,6 @@
 import React from 'react'
 import c from './Specialties.module.scss'
-import spec from '../../images/specialties.png'
+import spec from '../../images/group-photo.jpg'
 import { all_spec } from '../../utils'
 import Title from '../Title'
 import arrow from '../../images/arrow-right.svg'
