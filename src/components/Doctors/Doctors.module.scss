@@ -1,12 +1,15 @@
 .container{
-  margin-top: 64px;
+  max-width: 992px;
+  margin: 64px auto 0;
   .doctors{
     .cards{
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       margin-top: 64px;
-      gap: 21px;
+      gap: 20px;
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
     }
   }
 }
