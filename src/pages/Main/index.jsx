@@ -5,7 +5,7 @@ import { Components } from '../../components'
 const Main = () => {
   return (
     <div className={c.main}>
-      <Components.BannerSwiper/>
+      <Components.Banner/>
       <Components.WelcomeText/>
       <Components.Specialties/>
       <Components.Doctors/>
