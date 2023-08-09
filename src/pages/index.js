@@ -4,6 +4,7 @@ import ContactsPage from "./ContactsPage";
 import DoctorMore from "./Doctor";
 import NewsPage from "./NewsPage";
 import Gallery from "./Gallery";
+import Appointment from "./Appointment";
 export const Pages = {
   Main,
   DoctorsPage,
@@ -11,4 +12,5 @@ export const Pages = {
   DoctorMore,
   NewsPage,
   Gallery,
+  Appointment,
 }

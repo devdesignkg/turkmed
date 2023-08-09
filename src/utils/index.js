@@ -34,6 +34,11 @@ export const PUBLIC_ROUTES = [
     route: '/gallery/',
     page: <Pages.Gallery />,
   },
+  {
+    id: 6,
+    route: '/appointment/',
+    page: <Pages.Appointment />,
+  },
 ]
 
 export const bannerData = [
