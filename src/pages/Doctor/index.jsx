@@ -1,11 +1,12 @@
 import React from 'react'
 import c from './Doctor.module.scss'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { GetDoctors, ScrollTop } from '../../helpers'
 
 const DoctorMore = () => {
   const { id } = useParams()
   const { doctors } = GetDoctors()
+  const navigate = useNavigate()
   React.useEffect(() => {
     ScrollTop()
   }, [])
@@ -27,7 +28,7 @@ const DoctorMore = () => {
               <p>{item?.description}</p>
             </div>
             <div className={c.appointment}>
-              <button>Записаться на прием</button>
+              <button onClick={() => navigate(`/appointment/${id}`)}>Записаться на прием</button>
             </div>
           </div>
         </div>
