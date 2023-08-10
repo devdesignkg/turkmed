@@ -13,7 +13,7 @@ const Specialties = () => {
       <div className={c.spec_img}>
         <img src={spec} alt="spec" loading='lazy'/>
       </div>
-      <div className={c.our_spec}>
+      <div className={c.our_spec} id='spec'>
         <Title 
           title={'Наши специальности'}
           desc={'Всегда заботимся о вас!'}

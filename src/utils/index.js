@@ -36,7 +36,7 @@ export const PUBLIC_ROUTES = [
   },
   {
     id: 6,
-    route: '/appointment/',
+    route: '/appointment/:id',
     page: <Pages.Appointment />,
   },
 ]
@@ -105,21 +105,16 @@ export const navList = [
   },
   {
     id: 2,
-    title: 'Врачи',
-    route: '/doctors',
-  },
-  {
-    id: 3,
     title: 'Новости',
     route: '/news',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Галерея',
     route: '/gallery',
   },
   {
-    id: 5,
+    id: 4,
     title: 'Контакты',
     route: '/contacts',
   },

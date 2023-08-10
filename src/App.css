@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  pointer-events: all;
+}
+
 a {
   color: inherit;
   text-decoration: none;
