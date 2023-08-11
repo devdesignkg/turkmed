@@ -12,11 +12,29 @@ import SearchResult from '../SearchResult'
 const NavbarDown = () => {
   const [sidebarActive, setSidebarActive] = React.useState(false)
   const [activeInp, setActiveInp] = React.useState(false)
-  const [inputVal, setInputVal] = React.useState('')
+  const [height, setHeight] = React.useState(0)
   const [searchRes, setSearchRes] = React.useState(null)
   const path = useLocation().pathname
   const navigate = useNavigate()
   const {doctors} = GetDoctors()
+  
+
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+      setHeight(scrollPosition)
+    };
+
+    // Добавляем прослушиватель события прокрутки
+    window.addEventListener('scroll', handleScroll);
+
+    // Очищаем прослушиватель события при размонтировании компонента
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
 
   React.useEffect(() => {
     setSidebarActive(false)
@@ -34,10 +52,10 @@ const NavbarDown = () => {
     const result = doctors?.filter(item => item.full_name.toLowerCase().includes(e.toLowerCase()))
     e.length >= 1 ? setSearchRes(result) : setSearchRes(null)
   }
-
+  
   return (
      <>
-      <div className={c.navbar}>
+      <div className={ height >= 80 ? `${c.navbar} ${c.fixed}` : c.navbar}>
         <div className={c.container}>
           <ul>
             {
