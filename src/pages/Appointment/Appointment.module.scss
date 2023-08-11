@@ -83,6 +83,7 @@
 
           @media (max-width: 510px) {
             width: 90%;
+            margin-top: 50px;
           }
 
           @media (max-width: 375px) {
@@ -200,7 +201,7 @@
 
             input[type="date"] {
               position: relative;
-              padding: 10px;
+
             }
 
             input[type="date"]::-webkit-calendar-picker-indicator {
@@ -211,14 +212,12 @@
 
             input[type="date"]:before {
               content: '';
-              background: url('../../../src/images/arrow-down.svg');
+              background: url('../../../src/images/arrow-down.svg') no-repeat;
               display: block;
-              
-              /* This is the calendar icon in FontAwesome */
-              width: 15px;
-              height: 20px;
+              width: 16px;
+              height: 10px;
               position: absolute;
-              top: 12px;
+              top: 50%;
               right: 6px;
               color: #999;
             }
@@ -302,4 +301,15 @@
       }
     }
   }
+}
+
+.error_msg {
+  color: red;
+  position: absolute;
+  top: -25px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
 }

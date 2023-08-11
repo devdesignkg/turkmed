@@ -2,7 +2,7 @@ import React from 'react'
 
 const Map = () => {
   return (
-    <div style={{position:'relative', overflow:'hidden', marginTop: '64px'}}>
+    <div style={{position:'relative', overflow:'hidden', marginTop: '25px'}}>
       <a
         href="https://yandex.ru/maps/org/turkmed/3722607467/?utm_medium=mapframe&utm_source=maps"
         style={{color:"#eee",fontSize:"12px", position:"absolute", top:'0px'}}>

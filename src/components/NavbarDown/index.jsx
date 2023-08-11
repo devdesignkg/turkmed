@@ -18,8 +18,6 @@ const NavbarDown = () => {
   const navigate = useNavigate()
   const {doctors} = GetDoctors()
   
-
-
   React.useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY || document.documentElement.scrollTop;
@@ -48,23 +46,24 @@ const NavbarDown = () => {
 
 
   const searchingOnType = (e) => {
-    console.log(e);
     const result = doctors?.filter(item => item.full_name.toLowerCase().includes(e.toLowerCase()))
     e.length >= 1 ? setSearchRes(result) : setSearchRes(null)
   }
   
   return (
-     <>
+     <div className={c.nav_relative}>
       <div className={ height >= 80 ? `${c.navbar} ${c.fixed}` : c.navbar}>
         <div className={c.container}>
           <ul>
             {
               navList.map(item => (
                 <li key={item.id}>
+                  
                   <NavLink 
                     to={item.route} 
                     className={({ isActive }) => (isActive ? c.active : 'inactive')}
                   >
+                    {item.icon}
                     {item.title}
                   </NavLink>
                 </li>
@@ -76,11 +75,11 @@ const NavbarDown = () => {
           </div>
           <div className={c.right}>
             <div className={c.search}>
+              <img src={search} alt="img" onClick={() => setActiveInp(!activeInp)}/>
               {
                 activeInp && 
                 <input type="text" placeholder='Поиск...' onInput={(e) => searchingOnType(e.target.value)}/>
               }
-              <img src={search} alt="img" onClick={() => setActiveInp(!activeInp)}/>
             </div>
             {
               searchRes?.length > 0 ? <SearchResult data={searchRes}/> : null
@@ -92,7 +91,7 @@ const NavbarDown = () => {
         </div>
       </div>
       <Sidebar active={sidebarActive} setActive={setSidebarActive} />
-    </>
+    </div>
   )
 }
 

@@ -2,6 +2,11 @@ import { Pages } from "../pages"
 import spec from '../images/spec.svg'
 import banner from '../images/group-photo.jpg'
 import banner2 from '../images/reception.jpg'
+import { GiWorld} from 'react-icons/gi'
+import { HiOutlineNewspaper } from 'react-icons/hi'
+import { AiOutlinePicture } from 'react-icons/ai'
+import { FiSmartphone } from 'react-icons/fi'
+import { GrDocumentVerified } from 'react-icons/gr'
 
 export const PUBLIC_ROUTES = [
   {
@@ -101,22 +106,32 @@ export const navList = [
   {
     id:1,
     title: 'Главная',
+    icon: <GiWorld/>,
     route: '/',
   },
   {
     id: 2,
     title: 'Новости',
     route: '/news',
+    icon: <HiOutlineNewspaper />
   },
   {
     id: 3,
     title: 'Галерея',
     route: '/gallery',
+    icon: <AiOutlinePicture/>
   },
   {
     id: 4,
     title: 'Контакты',
     route: '/contacts',
+    icon: <FiSmartphone/>
+  },
+  {
+    id: 5,
+    title: 'Лицензии',
+    route: '/licenses',
+    icon: <GrDocumentVerified />
   },
 ]
 
