@@ -4,26 +4,53 @@ import arrow from '../../images/arrow-down.svg'
 import { GetDoctors, ScrollTop } from '../../helpers'
 import { useParams } from 'react-router-dom'
 import { timeList } from '../../utils'
+import { API } from '../../api'
+import { IMask, IMaskInput } from 'react-imask';
 
 const Appointment = () => {
   const { id } = useParams()
   const { doctors } = GetDoctors()
+  const ref = useRef();
+  const [error, setError] = React.useState(null)
   const [genderView, setGenderView] = React.useState(false)
   const [timeView, setTimeView] = React.useState(false)
+  const [date, setDate] = React.useState('')
+  const [time, setTime] = React.useState('')
+
   const [value, setValue] = React.useState({
-    name: '',
-    gender: '',
+    full_name: '',
+    sex: '',
     time: '',
-    date: '',
-    number: '',
+    phone_number: '',
+    doctor: Number(id),
   })
-  const ref = useRef();
+
+  const handleAppointment = () => {
+    API.postAppointment(value).then(r => console.log(r)).catch(e => e.response.data && setError(e.response.data))
+  }
+
+  React.useEffect(() => {
+    setValue({...value, time: [date, time].join(' ')})
+  }, [date, time])
+
+   React.useEffect(() => {
+    setTimeView(false)
+  }, [genderView])
+
   React.useEffect(() => {
     ScrollTop()
   }, [])
+
   const item = doctors?.find(value => value.id === Number(id))
 
-  console.log(value);
+  const PhoneMask = "+{996} (000) 00-00-00";
+  const phoneMask = [
+    {
+      mask: PhoneMask,
+    }
+  ];
+
+
   return (
     <div className={c.appointment}>
       <div className={c.more}>
@@ -41,21 +68,34 @@ const Appointment = () => {
             </div>
             <div className={c.form}>
               <div className={c.block_1}>
-                <input type="text" placeholder='Имя' onChange={(e) => setValue({...value, name: e.target.value})}/>
+                {
+                  error && <p className={c.error_msg}>Заполните все поля!</p>
+                }
+                <input 
+                  type="text" 
+                  placeholder='Имя' 
+                  onChange={(e) => setValue({...value, full_name: e.target.value})}
+                />
                 <div className={c.gender} onClick={() => setGenderView(!genderView)}>
-                  <p>Пол</p>
+                  <p>{value.sex.length > 0 ? value.sex : 'Пол'}</p>
                   <img src={arrow} alt=">" />
                 </div>
                 {
                   genderView ?
                   <div className={c.gender_select}>
-                    <p onClick={() => setValue({...value, gender: 'M'})}>
+                    <p onClick={() => {
+                      setValue({...value, sex: 'male'})
+                      setGenderView(false)
+                    }}>
                       М
                     </p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="90%" height="2" viewBox="0 0 464 2" fill="none">
                       <path d="M0 1L464 1.00004" stroke="white" stroke-opacity="0.5" />
                     </svg>
-                    <p onClick={() => setValue({...value, gender: 'Ж'})}>
+                    <p onClick={() => {
+                      setValue({...value, sex: 'female '})
+                      setGenderView(false)
+                    }}>
                       Ж
                     </p>
                   </div> : null
@@ -67,12 +107,15 @@ const Appointment = () => {
                   type="text" 
                   ref={ref}
                   placeholder='Дата'
-                  onChange={(e) => console.log(e.target.value)}
+                  onChange={(e) => setDate(e.target.value)}
                   onFocus={() => (ref.current.type = "date")}
                   onBlur={() => (ref.current.type = "date")}
                 />
-                <div className={c.gender} onClick={() => setTimeView(!timeView)}>
-                  <p>Время</p>
+                <div 
+                  className={c.gender} 
+                  onClick={() => setTimeView(!timeView)}
+                >
+                  <p>{time.length > 0 ? time : 'Время'}</p>
                   <img src={arrow} alt=">" />
                 </div>
                 {
@@ -80,7 +123,13 @@ const Appointment = () => {
                   <ul className={c.time}>
                     {
                       timeList.map((item, id) => (
-                        <li key={id} onClick={() => setValue({...value, time: item})}>
+                        <li 
+                          key={id} 
+                          onClick={() => {
+                            setTime(item)
+                            setTimeView(false)
+                          }}
+                        >
                           {item}
                         </li>
                       ))
@@ -89,8 +138,12 @@ const Appointment = () => {
                 }
               </div>
               <div className={c.block_3}>
-                <input type="number" placeholder='Номер телефона' onChange={(e) => setValue({...value, number: e.target.value})}/>
-                <button>Подтвердить</button>
+                <IMaskInput  
+                  mask={phoneMask} 
+                  placeholder='Номер телефона' 
+                  onChange={(e) => setValue({...value, phone_number: e.target.value})}
+                />
+                <button onClick={handleAppointment}>Подтвердить</button>
               </div>
             </div>
           </div>

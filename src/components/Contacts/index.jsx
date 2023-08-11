@@ -19,7 +19,9 @@ const Contacts = () => {
           <h1>Контакты</h1>
         </div> : <Title desc={'связаться с нами'} title={'Контакты'}/>
       }
-      
+      {
+        location === '/contacts' && <Map/>
+      }
       <div className={c.contacts_block}>
         <div className={c.contacts_card}>
           <div className={c.contacts_img}>
@@ -44,9 +46,6 @@ const Contacts = () => {
           ))
         }
       </div>
-      {
-        location === '/contacts' && <Map/>
-      }
     </div>
   )
 }
