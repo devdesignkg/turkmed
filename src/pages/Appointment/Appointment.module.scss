@@ -71,21 +71,12 @@
               font-size: 24px;
             }
           }
-
-          // p{
-          //   font-family: 'Work Sans', sans-serif;
-          //   font-weight: 500;
-          //   font-size: 16px;
-          //   height: 260px;
-          //   @media (max-width: 972px) {
-          //     height: auto;
-          //   }
-          // }
         }
 
         .form {
           width: 490px;
           margin-top: 64px;
+
           @media (max-width: 972px) {
             margin: 0 auto;
           }
@@ -109,6 +100,8 @@
 
           .block_1,
           .block_2 {
+            position: relative;
+
             input {
               width: 245px;
               height: 50px;
@@ -162,12 +155,99 @@
                 font-weight: 400;
                 line-height: 22px;
               }
+
+            }
+
+            .gender_select {
+              position: absolute;
+              top: 50px;
+              right: 0;
+              background: #007E85;
+              width: 245px;
+              height: auto;
+              box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.48);
+              z-index: 10;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding: 5px 0;
+
+              p {
+                color: var(--white, #FCFEFE);
+                font-family: 'Work Sans', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                cursor: pointer;
+              }
+
+              svg {
+                margin: 0 auto;
+              }
             }
           }
 
           .block_2 {
             .gender {
               border-radius: 0;
+            }
+
+            input {
+              border-radius: 0;
+            }
+
+            input[type="date"] {
+              position: relative;
+              padding: 10px;
+            }
+
+            input[type="date"]::-webkit-calendar-picker-indicator {
+              color: transparent;
+              background: none;
+              z-index: 1;
+            }
+
+            input[type="date"]:before {
+              content: '';
+              background: url('../../../src/images/arrow-down.svg');
+              display: block;
+              
+              /* This is the calendar icon in FontAwesome */
+              width: 15px;
+              height: 20px;
+              position: absolute;
+              top: 12px;
+              right: 6px;
+              color: #999;
+            }
+
+            .time {
+              position: absolute;
+              top: 50px;
+              right: 0;
+              background: #007E85;
+              width: 245px;
+              height: 100px;
+              overflow-y: scroll;
+              box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.48);
+              z-index: 10;
+              text-align: center;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              padding: 5px 0;
+
+              li {
+                color: var(--white, #FCFEFE);
+                font-family: 'Work Sans', sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                cursor: pointer;
+              }
             }
           }
 
