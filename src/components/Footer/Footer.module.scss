@@ -1,7 +1,7 @@
 .footer {
   background: #007E85;
   width: 100%;
-  margin-top: 64px;
+  margin-top: 264px;
 
   .container {
     max-width: 992px;
@@ -24,15 +24,17 @@
 
         @media (max-width: 768px) {
           justify-content: center;
+          flex-direction: column;
+          gap: 15px;
         }
 
         ul {
           display: flex;
           gap: 16px;
 
-          @media (max-width: 768px) {
-            display: none;
-          }
+          // @media (max-width: 768px) {
+          //   display: none;
+          // }
 
           li {
             cursor: pointer;

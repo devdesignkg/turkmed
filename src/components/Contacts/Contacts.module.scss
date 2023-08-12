@@ -49,8 +49,18 @@
       font-family: ' Work Sans', sans-serif;
       transition: .5s;
 
+      @media (max-width: 500px) {
+        width: 165px;
+        height: 100px;
+        padding: 19px 15px;
+      }
+
       .contacts_img {
         margin-bottom: 15px;
+
+        @media (max-width: 500px) {
+          display: none;
+        }
 
         svg {
           path {
@@ -72,6 +82,10 @@
         line-height: normal;
         text-transform: uppercase;
         margin-bottom: 8px;
+
+        @media (max-width: 500px) {
+          font-size: 14px;
+        }
       }
 
       a {
@@ -82,6 +96,10 @@
         line-height: 22px;
         display: block;
         margin-bottom: 5px;
+
+        @media (max-width: 500px) {
+          font-size: 12px;
+        }
       }
 
       &:hover {

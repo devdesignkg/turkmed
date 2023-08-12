@@ -75,11 +75,16 @@ const NavbarDown = () => {
           </div>
           <div className={c.right}>
             <div className={c.search}>
-              <img src={search} alt="img" onClick={() => setActiveInp(!activeInp)}/>
               {
                 activeInp && 
                 <input type="text" placeholder='Поиск...' onInput={(e) => searchingOnType(e.target.value)}/>
               }
+              <img 
+                className={activeInp ? c.search_icon : ''}
+                src={search} 
+                alt="img" 
+                onClick={() => setActiveInp(!activeInp)}
+              />
             </div>
             {
               searchRes?.length > 0 ? <SearchResult data={searchRes}/> : null

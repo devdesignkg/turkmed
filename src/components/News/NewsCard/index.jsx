@@ -3,16 +3,16 @@ import c from './NewsCard.module.scss'
 import arrow from '../../../images/arrow-right.svg'
 import newsImg from '../../../images/news.png'
 
-const NewsCard = () => {
+const NewsCard = ({date, description, image}) => {
   return (
     <div className={c.card}>
-      <img src={newsImg} alt="news" loading='lazy'/>
+      <img src={image} alt="news" loading='lazy'/>
       <div className={c.card_inner}>
         <span className={c.date}>
-          05.08.2023
+          {date}
         </span>
         <p>
-          This Article’s Title goes Here, but not too long.
+          {description.length > 50 ? description.split('').slice(0, 50).join('') + '...' : description}
         </p>
         <button>
           Подробнее
