@@ -2,5 +2,6 @@ import axios from "axios";
 
 export const API = {
   getDoctors: () => axios.get('/doctors/'),
-  postAppointment: (data) => axios.post('/appointment/', data)
+  postAppointment: (data) => axios.post('/appointment/', data),
+  getNews: () => axios.get('/news/'),
 }

@@ -7,17 +7,17 @@ const Doctors = () => {
   const { doctors } = GetDoctors()
 
   return (
-    <div className={c.container}>
-      <div className={c.doctors}>
-        <Components.Title 
-          title={'Наши врачи'}
-          desc={'ВЫ ПОПАДЕТЕ В НАДЕЖНЫЕ РУКИ'}
-        /> 
+    <div className={c.doctors}>
+      <div className={c.container}>
+        <div className={c.doctors}>
+          <Components.Title title={'Наши врачи'} desc={'ВЫ ПОПАДЕТЕ В НАДЕЖНЫЕ РУКИ'} />
 
-        <div className={c.cards}>
-          {
-            doctors?.map(item => <Components.DoctorsCard item={item}/>)
-          }
+          <div className={c.cards}>
+            {
+            doctors?.map(item =>
+            <Components.DoctorsCard item={item} />)
+            }
+          </div>
         </div>
       </div>
     </div>

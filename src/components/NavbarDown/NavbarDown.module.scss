@@ -129,6 +129,15 @@
             line-height: 22px;
           }
         }
+        .search_icon{
+          position: absolute;
+          right: -30px;
+          top: 50%;
+          transform: translateY(-50%);
+          @media (max-width: 500px) {
+            right: 60px;
+          }
+        }
       }
 
       .burger {

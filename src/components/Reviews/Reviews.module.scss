@@ -1,0 +1,15 @@
+.reviews {
+  max-width: 992px;
+  margin: 64px auto;
+
+  .cards {
+    margin-top: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    @media (max-width: 1024px) {
+      justify-content: center;
+    }
+  }
+}

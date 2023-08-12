@@ -1,6 +1,5 @@
 import React from 'react'
 import c from './Title.module.scss'
-import { useLocation } from 'react-router-dom'
 
 const Title = ({title, desc}) => {
   return (

@@ -14,6 +14,19 @@ export const GetDoctors = () => {
   }
 }
 
+export const GetNews = () => {
+  const [news, setNews] = React.useState(null)
+
+  React.useEffect(() => {
+    API.getNews()
+      .then(res => setNews(res.data))
+  }, [])
+
+  return {
+    news
+  }
+}
+
 export const ScrollTop = () => {
   window.scrollTo({
     top: 0

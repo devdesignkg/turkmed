@@ -10,7 +10,7 @@ import Doctors from "./Doctors";
 import DoctorsCard from "./DoctorsCard";
 import Footer from "./Footer";
 import BannerSwiper from "./BannerSwiper";
-
+import Reviews from "./Reviews";
 
 export const Components = {
   NavbarTop,
@@ -24,5 +24,6 @@ export const Components = {
   Doctors,
   DoctorsCard,
   Footer,
-  BannerSwiper
+  BannerSwiper,
+  Reviews
 }
