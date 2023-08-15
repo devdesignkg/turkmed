@@ -13,8 +13,9 @@ const News = () => {
       <div className={c.news_block}>
         <div className={c.news_card}>
           {
-            news?.map(item => (
+            news?.map((item, i) => (
               <NewsCard 
+                key={i}
                 date={item.date} 
                 description={item.description} 
                 image={item.image}

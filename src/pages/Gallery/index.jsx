@@ -1,8 +1,9 @@
 import React from 'react'
 import c from './Gallery.module.scss'
-import photo from '../../images/gallery-2.png'
+import { GetGallery } from '../../helpers'
 
 const Gallery = () => {
+  const {gallery} = GetGallery()
   return (
     <div className={c.gallery}>
       <div className={c.title}>
@@ -12,9 +13,9 @@ const Gallery = () => {
       </div>
       <div className={c.photos}>
         {
-          Array(6).fill('_').map((_, id) => (
+          gallery?.map((item, id) => (
             <div key={id} >
-              <img src={photo} alt="img" loading='lazy'/>
+              <img src={item.image} alt="img" loading='lazy'/>
             </div>
           ))
         }

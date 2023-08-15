@@ -27,6 +27,19 @@ export const GetNews = () => {
   }
 }
 
+export const GetGallery = () => {
+  const [gallery, setGallery] = React.useState(null)
+
+  React.useEffect(() => {
+    API.getGallery()
+      .then(res => setGallery(res.data))
+  }, [])
+
+  return {
+    gallery
+  }
+}
+
 export const ScrollTop = () => {
   window.scrollTo({
     top: 0
