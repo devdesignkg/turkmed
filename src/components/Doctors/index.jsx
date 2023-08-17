@@ -7,9 +7,9 @@ const Doctors = () => {
   const { doctors } = GetDoctors()
 
   return (
-    <div className={c.doctors}>
+    <div className={c.doctors} id='spec'>
       <div className={c.container}>
-        <div className={c.doctors}>
+        <div className={c.doctors} >
           <Components.Title title={'Наши врачи'} desc={'ВЫ ПОПАДЕТЕ В НАДЕЖНЫЕ РУКИ'} />
 
           <div className={c.cards}>

@@ -5,5 +5,6 @@ export const API = {
   postAppointment: (data) => axios.post('/appointment/', data),
   getNews: () => axios.get('/news/news'),
   postReview: (data) => axios.post('/reviews/', data),
-  getGallery: () => axios.get('/news/gallery/')
+  getGallery: () => axios.get('/news/gallery/'),
+  getLicenses: () => axios.get('/news/licenses'),
 }
