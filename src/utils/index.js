@@ -44,6 +44,11 @@ export const PUBLIC_ROUTES = [
     route: '/appointment/:id',
     page: <Pages.Appointment />,
   },
+  {
+    id: 7,
+    route: '/licenses/',
+    page: <Pages.Licenses />,
+  },
 ]
 
 export const bannerData = [
@@ -87,7 +92,7 @@ export const footerLinksList = [
 export const footerContactList = [
   {
     id: 1,
-    text: 'Телефон: (237) 681-812-255',
+    text: 'Телефон: +996 (999) 164-000',
     route: ''
   },
   {
@@ -97,7 +102,7 @@ export const footerContactList = [
   },
   {
     id: 3,
-    text: 'Адрес: 0123 Some place',
+    text: 'Адрес: г.Ош, ул. Монуева, 65-2',
     route: ''
   },
 ]
@@ -203,8 +208,8 @@ export const contactsInfo = [
     id:1,
     img: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="39" viewBox="0 0 32 39" fill="none">< path d="M1 15.4C1 29.8 16 37 16 37C16 37 31 29.8 31 15.4C31 7.45 24.2875 1 16 1C7.7125 1 1 7.45 1 15.4Z" stroke="#007E85" strokeWidth="2" /><path d="M16.0001 20.32C18.8499 20.32 21.1601 18.0098 21.1601 15.16C21.1601 12.3102 18.8499 10 16.0001 10C13.1503 10 10.8401 12.3102 10.8401 15.16C10.8401 18.0098 13.1503 20.32 16.0001 20.32Z" stroke="#007E85" strokeWidth="2" /></svg > ,
     text: 'адрес',
-    span1: '0123 Some place',
-    span2: '9876 Some country'
+    span1: 'г.Ош, ул. Монуева, 65-2',
+    span2: ''
   },
   {
     id:2,
@@ -213,8 +218,8 @@ export const contactsInfo = [
       <path d="M37.1998 6.8999L19.4998 18.6999L1.7998 6.8999" stroke="#007E85" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>,
     text: 'эл. почта',
-    span1: 'fildineeesoe@gmil.com',
-    span2: 'myebstudios@gmail.com'
+    span1: 'turkmedct@mail.ru',
+    span2: ''
   },
   {
     id: 3,

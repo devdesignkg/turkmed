@@ -7,7 +7,7 @@ const Main = () => {
     <div className={c.main}>
       <Components.Banner/>
       <Components.WelcomeText/>
-      <Components.Specialties/>
+      {/* <Components.Specialties/> */}
       <Components.Doctors/>
       <Components.News/>
       <Components.Reviews/>

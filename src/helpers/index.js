@@ -40,6 +40,20 @@ export const GetGallery = () => {
   }
 }
 
+export const GetLicenses = () => {
+  const [licenses, setLicenses] = React.useState(null)
+
+  React.useEffect(() => {
+    API.getLicenses()
+      .then(res => setLicenses(res.data))
+  }, [])
+
+  return {
+    licenses
+  }
+}
+
+
 export const ScrollTop = () => {
   window.scrollTo({
     top: 0

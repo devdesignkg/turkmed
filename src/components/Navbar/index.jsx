@@ -18,7 +18,9 @@ const NavbarTop = () => {
             <img src={phone} alt="phone" />
             <div>
               <p>ТЕЛЕФОН</p>
-              <a href="tel:237681812255">(237) 681-812-255</a>
+              <a href="tel:996227164000">+996 (999) 164-000</a>
+              <br />
+              <a href="tel:996227164000">+996 (227) 164-000</a>
             </div>
           </div>
           {/*  */}
@@ -26,7 +28,7 @@ const NavbarTop = () => {
             <img src={clock} alt="clock" />
             <div>
               <p>ГРАФИК РАБОТЫ</p>
-              <span>09:00 - 20:00 Everyday</span>
+              <span>09:00 - 22:00 Everyday</span>
             </div>
           </div>
           {/*  */}
@@ -34,7 +36,7 @@ const NavbarTop = () => {
             <img src={location} alt="location" />
             <div>
               <p>АДРЕС</p>
-              <span>0123 Some Place</span>
+              <span> г.Ош, ул. Монуева, 65-2</span>
             </div>
           </div>
           
