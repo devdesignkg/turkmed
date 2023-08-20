@@ -1,11 +1,12 @@
 .card {
   width: 312px;
-  height: 470px;
+  min-height: 280px;
+  max-height: 500px;
   background: #007E85;
   padding: 0 31px;
   text-align: center;
   position: relative;
-
+  margin-bottom: 50px;
   @media (max-width: 1024px) {
     margin-bottom: 50px;
   }

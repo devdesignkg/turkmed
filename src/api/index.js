@@ -7,4 +7,5 @@ export const API = {
   postReview: (data) => axios.post('/reviews/', data),
   getGallery: () => axios.get('/news/gallery/'),
   getLicenses: () => axios.get('/news/licenses'),
+  getReviews: () => axios.get('/reviews/'),
 }

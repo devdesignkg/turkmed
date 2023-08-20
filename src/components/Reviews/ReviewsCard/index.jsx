@@ -1,20 +1,19 @@
-import React, { lazy } from 'react'
+import React from 'react'
 import c from './ReviewsCard.module.scss'
-import user from '../../../images/specialties.png'
 
 
-const ReviewsCard = () => {
+const ReviewsCard = ({desc, img, fullName}) => {
   return (
     <div className={c.card}>
       <div className={c.user_img}>
-        <img src={user} alt="" loading='lazy'/>
+        <img src={img} alt="" loading='lazy'/>
       </div>
       <div className={c.card_inner}>
         <h3>
-          Палянчаев тукунчу
+          {fullName}
         </h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare ornare. Convallis felis vitae tortor augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.
+          {desc.length > 260 ? desc.split('').slice(0, 260).join('') + ' ...' : desc}
         </p>
       </div>
       <h1>

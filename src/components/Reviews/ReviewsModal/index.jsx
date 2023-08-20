@@ -10,20 +10,17 @@ const ReviewsModal = ({setModalState}) => {
   const [desc, setDesc] = React.useState(null)
 
 
+  const handleChange = (e) => {
+    setChoosenFile(e.target.files[0])
+  }
+
   const post = async () => {
     const formData = new FormData()
     formData.append('image', choosenFile)
+    formData.append('full_name', fullName)
+    formData.append('description', desc)
     
-    try{
-      API.postReview({
-        image: formData,
-        full_name: fullName,
-        description: desc,
-      }).then(r => console.log(r.data))
-    }catch (error){
-      console.error('Произошла ошибка:', error);
-    }
-    
+    API.postReview(formData).then(r => r.data && setModalState(false))
   }
   
 
@@ -34,7 +31,7 @@ const ReviewsModal = ({setModalState}) => {
         <h1>Добавить отзыв</h1>
         <div className={c.user_photo}>
           <img src={staticImg} alt="user" />
-          <input type="file" id='add' accept="image/*" onChange={(e) => setChoosenFile(e.target.files[0])}/>
+          <input type="file" id='add' accept="image/*" onChange={handleChange}/>
           <label htmlFor="add">Нажмите чтобы выбрать фото</label>
         </div>
         <input 
