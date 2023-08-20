@@ -12,7 +12,7 @@
 
   .modal_block {
     position: fixed;
-    top: 25%;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 201;
@@ -20,6 +20,24 @@
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    background: #007E85;
+    width: 600px;
+    padding: 70px 0;
+
+    @media (max-width: 768px) {
+      padding: 25px 0;
+    }
+
+    @media (max-width: 610px) {
+      width: 90%;
+    }
+
+    .x {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
 
     h1 {
       color: #FFF;
@@ -36,12 +54,24 @@
       align-items: center;
       gap: 30px;
       width: 400px;
-      @media (max-width: 390px) {
-        width: 320px;
+      @media (max-width: 470px) {
+        width: 90%;
       }
-      @media (max-width: 320px) {
-        width: 300px;
+      // @media (max-width: 390px) {
+      //   width: 320px;
+      // }
+
+      // @media (max-width: 320px) {
+      //   width: 300px;
+      // }
+
+      img {
+        width: 77px;
+        height: 77px;
+        object-fit: cover;
+        border-radius: 50px;
       }
+
       input {
         display: none;
       }
@@ -78,12 +108,17 @@
         color: #fff;
       }
 
-      @media (max-width: 390px) {
-        width: 320px;
+      
+      @media (max-width: 470px) {
+        width: 90%;
       }
-      @media (max-width: 320px) {
-        width: 300px;
-      }
+      // @media (max-width: 390px) {
+      //   width: 320px;
+      // }
+
+      // @media (max-width: 320px) {
+      //   width: 300px;
+      // }
     }
 
     textarea {
@@ -91,15 +126,20 @@
       width: 400px;
       min-height: 65px;
       max-height: 160px;
-      &::-webkit-scrollbar{
+
+      &::-webkit-scrollbar {
         visibility: hidden;
       }
-      @media (max-width: 390px) {
-        width: 320px;
+      @media (max-width: 470px) {
+        width: 90%;
       }
-      @media (max-width: 320px) {
-        width: 300px;
-      }
+      // @media (max-width: 390px) {
+      //   width: 320px;
+      // }
+
+      // @media (max-width: 320px) {
+      //   width: 300px;
+      // }
     }
 
     button {
@@ -113,12 +153,16 @@
       font-weight: 600;
       line-height: normal;
       padding: 30px 0;
-      @media (max-width: 390px) {
-        width: 320px;
+      @media (max-width: 470px) {
+        width: 90%;
       }
-      @media (max-width: 320px) {
-        width: 300px;
-      }
+      // @media (max-width: 390px) {
+      //   width: 320px;
+      // }
+
+      // @media (max-width: 320px) {
+      //   width: 300px;
+      // }
     }
   }
 }
