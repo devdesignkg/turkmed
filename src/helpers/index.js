@@ -53,6 +53,20 @@ export const GetLicenses = () => {
   }
 }
 
+export const GetReviews = () => {
+  const [reviews, setReviews] = React.useState(null)
+
+  React.useEffect(() => {
+    API.getReviews()
+      .then(res => setReviews(res.data))
+  }, [])
+
+  return {
+    reviews
+  }
+}
+
+
 
 export const ScrollTop = () => {
   window.scrollTo({

@@ -1,9 +1,12 @@
 import React from 'react'
 import c from './Gallery.module.scss'
-import { GetGallery } from '../../helpers'
+import { GetGallery, ScrollTop } from '../../helpers'
 
 const Gallery = () => {
   const {gallery} = GetGallery()
+  React.useEffect(() => {
+    ScrollTop()
+  }, [])
   return (
     <div className={c.gallery}>
       <div className={c.title}>
