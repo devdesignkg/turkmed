@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import c from './Appointment.module.scss'
 import arrow from '../../images/arrow-down.svg'
 import { GetDoctors, ScrollTop } from '../../helpers'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { timeList } from '../../utils'
 import { API } from '../../api'
 import { IMask, IMaskInput } from 'react-imask';
@@ -16,6 +16,7 @@ const Appointment = () => {
   const [timeView, setTimeView] = React.useState(false)
   const [date, setDate] = React.useState('')
   const [time, setTime] = React.useState('')
+  const navigate = useNavigate()
 
   const [value, setValue] = React.useState({
     full_name: '',
@@ -26,7 +27,7 @@ const Appointment = () => {
   })
 
   const handleAppointment = () => {
-    API.postAppointment(value).then(r => console.log(r)).catch(e => e.response.data && setError(e.response.data))
+    API.postAppointment(value).then(r => r.data && navigate('/')).catch(e => e.response.data && setError(e.response.data))
   }
 
   React.useEffect(() => {
@@ -93,7 +94,7 @@ const Appointment = () => {
                       <path d="M0 1L464 1.00004" stroke="white" stroke-opacity="0.5" />
                     </svg>
                     <p onClick={() => {
-                      setValue({...value, sex: 'female '})
+                      setValue({...value, sex: 'female'})
                       setGenderView(false)
                     }}>
                       Ж
