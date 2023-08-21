@@ -39,6 +39,14 @@
       cursor: pointer;
     }
 
+    h3 {
+      color: #fff;
+      font-family: 'Work Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
     h1 {
       color: #FFF;
       text-align: center;
@@ -54,9 +62,11 @@
       align-items: center;
       gap: 30px;
       width: 400px;
+
       @media (max-width: 470px) {
         width: 90%;
       }
+
       // @media (max-width: 390px) {
       //   width: 320px;
       // }
@@ -108,10 +118,11 @@
         color: #fff;
       }
 
-      
+
       @media (max-width: 470px) {
         width: 90%;
       }
+
       // @media (max-width: 390px) {
       //   width: 320px;
       // }
@@ -130,9 +141,11 @@
       &::-webkit-scrollbar {
         visibility: hidden;
       }
+
       @media (max-width: 470px) {
         width: 90%;
       }
+
       // @media (max-width: 390px) {
       //   width: 320px;
       // }
@@ -153,9 +166,11 @@
       font-weight: 600;
       line-height: normal;
       padding: 30px 0;
+
       @media (max-width: 470px) {
         width: 90%;
       }
+
       // @media (max-width: 390px) {
       //   width: 320px;
       // }

@@ -28,7 +28,7 @@ const NavbarTop = () => {
             <img src={clock} alt="clock" />
             <div>
               <p>ГРАФИК РАБОТЫ</p>
-              <span>09:00 - 22:00 Everyday</span>
+              <span>07:00 - 17:00</span>
             </div>
           </div>
           {/*  */}

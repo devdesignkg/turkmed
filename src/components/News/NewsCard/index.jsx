@@ -1,9 +1,7 @@
 import React from 'react'
 import c from './NewsCard.module.scss'
-import arrow from '../../../images/arrow-right.svg'
-import newsImg from '../../../images/news.png'
 
-const NewsCard = ({date, description, image}) => {
+const NewsCard = ({date, description, image, title}) => {
   return (
     <div className={c.card}>
       <img src={image} alt="news" loading='lazy'/>
@@ -11,13 +9,10 @@ const NewsCard = ({date, description, image}) => {
         <span className={c.date}>
           {date}
         </span>
+        <h3>{title}</h3>
         <p>
           {description.length > 50 ? description.split('').slice(0, 50).join('') + '...' : description}
         </p>
-        <button>
-          Подробнее
-          <img src={arrow} alt="arrow" />
-        </button>
       </div>
     </div>
   )

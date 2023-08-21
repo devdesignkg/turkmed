@@ -8,7 +8,9 @@ const ContactsCard = ({img, text, span1, span2}) => {
        {img}
      </div>
      <p>{text}</p>
-     <span>{span1}</span>
+     {
+      text === 'эл. почта' ? <a href='mailto:turkmedct@mail.ru'>{span1}</a> : <span>{span1}</span>
+     }
      <span>{span2}</span>
    </div>
   )

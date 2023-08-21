@@ -10,7 +10,7 @@ const ReviewsModal = ({setModalState}) => {
   const [selectedImage, setSelectedImage] = React.useState(null);
   const [fullName, setFullName] = React.useState(null)
   const [desc, setDesc] = React.useState(null)
-
+  const [error, setError] = React.useState(false)
 
   const handleChange = (e) => {
     setChoosenFile(e.target.files[0])
@@ -29,7 +29,9 @@ const ReviewsModal = ({setModalState}) => {
     formData.append('full_name', fullName)
     formData.append('description', desc)
     
-    API.postReview(formData).then(r => r.data && setModalState(false))
+    API.postReview(formData)
+    .then(r => r.data && setModalState(false))
+    .catch(e => e.response.data ? setError(true) : setError(false))
   }
   
 
@@ -37,6 +39,9 @@ const ReviewsModal = ({setModalState}) => {
     <div className={c.modal}>
       <div className={c.background} onClick={() => setModalState(false)}></div>
       <div className={c.modal_block}>
+        {
+          error && <h3>Заполните все поля!</h3>
+        }
         <img className={c.x} src={x} alt="x" onClick={() => setModalState(false)}/>
         <h1>Добавить отзыв</h1>
         <div className={c.user_photo}>

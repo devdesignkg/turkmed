@@ -19,6 +19,7 @@ const News = () => {
                 date={item.date} 
                 description={item.description} 
                 image={item.image}
+                title={item.title}
               />
             ))
           }

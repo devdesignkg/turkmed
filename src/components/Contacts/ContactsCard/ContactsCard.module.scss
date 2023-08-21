@@ -28,7 +28,7 @@
     }
   }
 
-  p,
+  p,a,
   span {
     transition: .5s;
   }
@@ -47,7 +47,7 @@
     }
   }
 
-  span {
+  span,a {
     color: #007E85;
     font-size: 16px;
     font-style: normal;
@@ -63,7 +63,7 @@
   &:hover {
     background: #007E85;
 
-    p,
+    p,a,
     span {
       color: var(--accent, #BFD2F8);
     }
