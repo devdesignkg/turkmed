@@ -30,6 +30,7 @@
 
         ul {
           display: flex;
+          align-items: center;
           gap: 16px;
 
           // @media (max-width: 768px) {
@@ -38,7 +39,15 @@
 
           li {
             cursor: pointer;
+            svg{
+              width: 24px;
+              height: 24px;
+              path{
+                fill:#BFD2F8
+              }
+            }
           }
+
         }
       }
     }
