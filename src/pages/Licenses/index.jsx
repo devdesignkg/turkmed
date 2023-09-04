@@ -13,7 +13,7 @@ const Licenses = () => {
       {
         licenses?.map(item => (
           <div>
-            <img src={item.image} alt="licenses" />
+            <img src={item.image} alt="licenses" loading='lazy'/>
           </div>
         ))
       }
