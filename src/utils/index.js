@@ -49,6 +49,11 @@ export const PUBLIC_ROUTES = [
     route: '/licenses/',
     page: <Pages.Licenses />,
   },
+  {
+    id: 8,
+    route: '/news/:id/',
+    page: <Pages.MoreNews />
+  }
 ]
 
 export const bannerData = [

@@ -6,6 +6,7 @@ import NewsPage from "./NewsPage";
 import Gallery from "./Gallery";
 import Appointment from "./Appointment";
 import Licenses from "./Licenses";
+import MoreNews from './moreNews';
 
 export const Pages = {
   Main,
@@ -15,5 +16,6 @@ export const Pages = {
   NewsPage,
   Gallery,
   Appointment,
-  Licenses
+  Licenses,
+  MoreNews
 }

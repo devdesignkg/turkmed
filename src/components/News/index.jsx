@@ -6,7 +6,9 @@ import { GetNews } from '../../helpers'
 
 const News = () => {
   const {news} = GetNews()
-  
+  console.log(news);
+
+
   return (
     <div className={c.news}>
       <Title desc={'мы всегда делимся своими новостями'} title={'Новости'}/>
@@ -16,6 +18,7 @@ const News = () => {
             news?.map((item, i) => (
               <NewsCard 
                 key={i}
+                id={item.id}
                 date={item.date} 
                 description={item.description} 
                 image={item.image}

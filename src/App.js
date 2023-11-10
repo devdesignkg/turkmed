@@ -4,7 +4,7 @@ import MainRoutes from './routes';
 
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://turkmed890.pythonanywhere.com'
+axios.defaults.baseURL = 'https://turkmedapi.pythonanywhere.com'
 
 function App() {
   const width = window.innerWidth
