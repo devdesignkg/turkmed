@@ -6,11 +6,12 @@
   width: 100%;
   padding: 5px 0;
   @media (max-width: 500px) {
-    background-attachment: unset;
+    background: grey;
   }
+  
   .container {
     max-width: 992px;
-    margin: 32px auto 0;
+    margin: 32px 0;
 
     .doctors {
       .cards {

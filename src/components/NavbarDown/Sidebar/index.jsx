@@ -22,7 +22,7 @@ const Sidebar = ({active, setActive}) => {
             ))
           }
         </ul>
-        <button className={c.sidebar_btn}>Appointment</button>
+        {/* <button className={c.sidebar_btn}>Appointment</button> */}
       </div>
     </div>
   )

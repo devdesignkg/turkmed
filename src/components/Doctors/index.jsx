@@ -15,7 +15,7 @@ const Doctors = () => {
           <div className={c.cards}>
             {
             doctors?.map(item =>
-            <Components.DoctorsCard item={item} />)
+              <Components.DoctorsCard item={item} />)
             }
           </div>
         </div>
