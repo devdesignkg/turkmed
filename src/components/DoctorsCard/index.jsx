@@ -16,32 +16,6 @@ const DoctorsCard = ({item}) => {
       <div className={c.info}>
         <p>{item.full_name}</p>
         <h2>{item.job}</h2>
-        <div className={c.socials}>
-          <li>
-            <Link to={'/'}>
-              <img 
-                src="/icons/instagram.svg"
-                alt="instagram"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link to={'/'}>
-              <img 
-                src="/icons/youtube.svg"
-                alt="youtube"
-              />
-            </Link>
-          </li>
-          <li>
-            <Link to={'/'}>
-              <img 
-                src="/icons/whatsapp.svg"
-                alt="whatsapp"
-              />
-            </Link>
-          </li>
-        </div>
       </div>
       <button onClick={() => navigate(`/doctor/${item.id}/`)}>
         Посмотреть
